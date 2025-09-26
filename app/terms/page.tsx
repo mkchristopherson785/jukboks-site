@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Terms of Service — JukBoks",
+  description: "Review the JukBoks Terms of Service covering usage, responsibilities, and agreements.",
+};
+
 export default function Terms() {
   return (
     <main className="min-h-screen bg-black text-white p-10">

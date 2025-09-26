@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Privacy Policy — JukBoks",
+  description: "Read the JukBoks Privacy Policy to learn how we protect your information and respect your privacy.",
+};
+
 export default function Privacy() {
   return (
     <main className="min-h-screen bg-black text-white p-10">

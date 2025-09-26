@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "JukBoks Web App — Start a Party",
+  description: "Host or join a JukBoks party. Add songs, vote in real time, and let the crowd control the music.",
+};
+
 export default function AppHome() {
   return (
     <main className="min-h-screen bg-black text-white p-10">

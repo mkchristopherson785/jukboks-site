@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact JukBoks",
+  description: "Get in touch with the JukBoks team. Send us your questions, feedback, or partnership ideas.",
+};
+
 export default function Contact() {
   return (
     <main className="min-h-screen bg-black text-white p-10">
