@@ -83,7 +83,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* … features, how it works, FAQ, footer (same as your version) … */}
+      {/* Features */}
+      <section id="features" className="border-t border-white/10 bg-white/-[0.02] py-16">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-3">
+          {[
+            { title: "Real-time queue", desc: "Songs rise and fall instantly as people vote." },
+            { title: "Easy joining", desc: "Share a code or link. No account needed for guests." },
+            { title: "Host controls", desc: "Skip, lock queue, or clear trolls with one tap." },
+          ].map((f) => (
+            <div key={f.title} className="rounded-2xl border border-white/10 bg-black p-6">
+              <div className="mb-3 h-8 w-8 rounded-lg bg-white/10" />
+              <h3 className="text-lg font-semibold">{f.title}</h3>
+              <p className="mt-2 text-sm text-white/70">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section id="how" className="mx-auto max-w-6xl px-4 py-16">
+        <h2 className="text-2xl font-semibold">How it works</h2>
+        <ol className="mt-6 grid gap-4 md:grid-cols-3">
+          {[
+            { n: "1", t: "Create a party", d: "Host taps Start a party and gets a shareable code." },
+            { n: "2", t: "Friends join", d: "Guests open the link, add songs from search, and vote." },
+            { n: "3", t: "Music flows", d: "Top-voted songs play next. Everyone’s happy." },
+          ].map((s) => (
+            <li key={s.n} className="rounded-2xl border border-white/10 p-5">
+              <div className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm">{s.n}</div>
+              <div className="font-medium">{s.t}</div>
+              <div className="text-sm text-white/70">{s.d}</div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="border-t border-white/10 bg-white/-[0.02] py-16">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="text-2xl font-semibold">FAQ</h2>
+          <div className="mt-6 space-y-6">
+            <div>
+              <div className="font-medium">Do guests need to create an account?</div>
+              <p className="text-sm text-white/70">No. Share a code or link—guests can join and vote immediately.</p>
+            </div>
+            <div>
+              <div className="font-medium">Does it work on iPhone and Android?</div>
+              <p className="text-sm text-white/70">Yes. Mobile apps and a web version are supported.</p>
+            </div>
+            <div>
+              <div className="font-medium">Can the host moderate?</div>
+              <p className="text-sm text-white/70">Hosts can skip, lock, or clear entries, and set limits per user.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-white/60 md:flex-row">
+          <div>© {new Date().getFullYear()} JukBoks</div>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+            <Link href="/contact" className="hover:text-white">Contact</Link>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
