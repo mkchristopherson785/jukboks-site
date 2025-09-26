@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "JukBoks — Crowd-powered music queues",
   description: "Create a party, add songs, and vote in real time. iOS, Android, and web.",
 };
